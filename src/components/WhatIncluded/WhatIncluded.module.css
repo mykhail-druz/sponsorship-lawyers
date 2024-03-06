@@ -1,0 +1,29 @@
+.title{
+    @apply text-[56px] font-bold text-black
+}
+.section{
+@apply flex flex-col w-[80%] mx-auto space-y-16;
+}
+.button{
+    @apply px-4 py-3 border border-dark-biege text-dark-biege rounded-[4px] w-[190px] text-center
+}
+.icon__bg{
+    border-radius: 100%;
+    @apply p-4 bg-dark-biege inline-block mx-auto
+}
+.grid__list{
+    @apply grid grid-cols-4 gap-4;
+}
+.card__body{
+    @apply justify-center items-center flex flex-col rounded-[24px] h-[300px] bg-white space-y-8;
+     border-top: 1px solid #BF996F;
+     border-right: 6px solid #BF996F;
+     border-bottom: 6px solid #BF996F;
+     border-left: 1px solid #BF996F;
+}
+.card__title{
+    @apply text-center text-light-dark text-[18px] font-light
+}
+.text__block{
+    @apply flex flex-col space-y-8
+}
