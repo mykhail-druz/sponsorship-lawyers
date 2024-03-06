@@ -6,7 +6,7 @@ import Email from "@/icons/footer/email.svg";
 import Geo from "@/icons/footer/geo.svg";
 import Phone from "@/icons/footer/phone.svg";
 
-const Footer = () => {
+export const Footer = () => {
   return (
     <footer className={`${styles.footer} ${poppins.className}`}>
       <div className={styles.container}>
@@ -55,4 +55,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+

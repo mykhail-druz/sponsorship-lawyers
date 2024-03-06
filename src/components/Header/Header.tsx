@@ -3,7 +3,7 @@ import Logo from "../../icons/logo.svg";
 import Phone from "../../icons/phone.svg";
 import { poppins } from "@/fonts/fonts";
 
-const Header = () => {
+export const Header = () => {
   return (
     <header className={`${styles.header} ${poppins.className}`}>
       <div className={styles.container}>
@@ -21,4 +21,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+
