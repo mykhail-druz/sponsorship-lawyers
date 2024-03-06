@@ -1,0 +1,33 @@
+.section {
+    @apply flex;
+}
+
+.container {
+    @apply mx-auto w-[90%] space-y-12;
+}
+
+.h1 {
+    @apply text-[56px] font-bold;
+    line-height: 69px;
+}
+
+.card__body{
+    @apply flex flex-col rounded-[24px] bg-[#FFF8F0] px-6 pt-12 pb-12 space-y-6;
+     border-top: 1px solid #BF996F;
+     border-right: 6px solid #BF996F;
+     border-bottom: 6px solid #BF996F;
+     border-left: 1px solid #BF996F;
+}
+
+.desc {
+    @apply text-[18px] font-light;
+}
+
+.name{
+    @apply text-[18px] font-medium ml-auto pt-4;
+    line-height: 27px;
+}
+
+.nav__block {
+    @apply flex space-x-4;
+}
