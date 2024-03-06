@@ -1,7 +1,59 @@
 .section {
-    @apply flex mt-32 mb-24;
+    @apply flex mt-32 mb-24 mx-24 justify-center;
 }
 
 .container {
-    @apply mx-auto;
+    @apply w-full flex justify-between;
+}
+.dark__beige{
+    @apply text-brown
+}
+.title{
+    @apply font-bold text-[72px]
+}
+.text__block{
+    @apply w-1/2;
+}
+.form{
+    @apply bg-white justify-center items-center flex flex-col rounded-[36px];
+     border-top: 0px solid black;
+     border-right: 12px solid #FADAB7;
+     border-bottom: 12px solid #FADAB7;
+     border-left: 0px solid black;
+}
+.form__bg{
+@apply border border-black w-full h-full rounded-[24px] flex px-4 flex-col py-8 items-center justify-center
+}
+.inputBig{
+    @apply border border-brown rounded bg-[#f5f5f5] py-2 px-3 w-[60%];
+}
+.input__block{
+    @apply flex gap-4
+}
+.inputSmall{
+    @apply border border-brown rounded bg-[#f5f5f5] py-2 px-3 w-[40%];
+}
+.inputLarge{
+    @apply w-full border border-brown rounded bg-[#f5f5f5] py-2 px-3;
+}
+.title__form{
+    @apply font-bold text-[29px]
+}
+.button{
+    @apply w-full bg-dark text-center py-3 text-white font-bold rounded
+}
+.content{
+@apply space-y-4 mb-16 mt-8
+}
+.check{
+@apply text-[18px] font-light text-light-dark flex gap-2
+}
+.check__block{
+    @apply flex space-x-4
+}
+.check__list{
+    @apply space-y-2
+}
+.imageBlock{
+    @apply flex space-x-4 mt-4
 }
