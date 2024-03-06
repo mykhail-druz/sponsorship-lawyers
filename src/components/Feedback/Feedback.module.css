@@ -1,13 +1,13 @@
 .section {
-    @apply flex;
+    @apply flex w-full;
 }
 
 .container {
-    @apply mx-auto w-[90%] space-y-12;
+    @apply mx-auto md:w-[90%] space-y-4 md:space-y-12;
 }
 
 .h1 {
-    @apply text-[56px] font-bold;
+    @apply text-[32px] md:text-[56px] font-bold;
     line-height: 69px;
 }
 

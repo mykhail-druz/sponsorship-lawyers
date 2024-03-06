@@ -24,13 +24,15 @@ export const AboutUs = () => {
             <div className="mx-auto" key={index}>
               <Image
                 src={`/images/about/about_${index}.png`}
-                alt={`About us imege ${index}`}
+                alt={`About us image ${index}`}
                 width={250}
                 height={250}
+                className={styles.image}
               />
             </div>
           ))}
         </div>
+        <div className={styles.second__block}>
         <div className={`${poppins.className} ${styles.text_2}`}>
           <h2 className={`${basker.className} ${styles.h2}`}>
             Hire from outside the UK or from within the UK.
@@ -52,6 +54,8 @@ export const AboutUs = () => {
             </a>
           </button>
         </div>
+        <Image height={460} width={600} src="/images/about/about_6.png" alt="Hire" />
+      </div>
       </div>
     </section>
   );

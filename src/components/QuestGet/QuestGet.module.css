@@ -1,8 +1,8 @@
 .title{
-@apply font-bold text-[56px] text-center;
+@apply font-bold text-[32px] md:text-[56px] text-center;
 }
 .section{
-    @apply flex flex-col items-center space-y-8 py-16;
+    @apply flex flex-col items-center space-y-8 py-16 px-4;
 }
 .text__block{
     @apply flex space-y-4 flex-col
@@ -30,5 +30,5 @@
     @apply text-light-dark lg:text-[18px] text-center font-light;
 }
 .documents{
-    @apply grid grid-cols-3 gap-y-12 gap-x-32
+    @apply grid md:grid-cols-3 md:gap-y-12 gap-y-4 justify-center md:gap-x-32
 }

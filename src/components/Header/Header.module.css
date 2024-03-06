@@ -12,13 +12,13 @@
 }
 
 .phone {
-    @apply flex space-x-1 cursor-pointer;
+    @apply hidden md:flex space-x-1 cursor-pointer;
 }
 
 .consultation {
-    @apply rounded border-[1px] border-dark-biege bg-biege py-4 px-5 cursor-pointer capitalize;
+    @apply text-center text-[12px] md:text-[16px] rounded border-[1px] border-dark-biege bg-biege md:py-4 py-2 px-3 md:px-5 cursor-pointer capitalize;
 }
 
 .licence {
-    @apply rounded border-[1px] border-dark-biege bg-dark text-dark-biege py-4 px-5 cursor-pointer;
+    @apply md:block hidden rounded border-[1px] border-dark-biege bg-dark text-dark-biege py-4 px-5 cursor-pointer;
 }

@@ -18,9 +18,7 @@ export const Card: React.FC<CardProps> = ({ title, desc }) => {
     <div className={`${styles.card}`} onClick={toggleOpen}>
       <div className={styles.card_title__container}>
         <h3 className={`${isOpen ? styles.title_open : styles.title_closed} ${basker.className}`}>{title}</h3>
-        <div className={`${isOpen ? styles.plus_open : styles.plus_closed}`}>
-          <Plus />
-        </div>
+          <Plus className={`${isOpen ? styles.plus_open : styles.plus_closed}`} />
       </div>
 
       <p className={`${isOpen ? styles.open : styles.card_desc} ${poppins.className}`}>

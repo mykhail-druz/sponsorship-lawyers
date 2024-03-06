@@ -1,9 +1,9 @@
 .section {
-  @apply my-32 flex;
+  @apply md:my-32 my-16 flex;
 }
 
 .container {
-  @apply w-[70%] mx-auto rounded-[24px] py-6;
+  @apply md:w-[70%] w-[95%] mx-auto rounded-[24px] py-6 relative;
   background-color: #fff8f0;
   border-top: 1px solid #bf996f;
   border-right: 6px solid #bf996f;
@@ -12,12 +12,11 @@
 }
 
 .h1 {
-  @apply font-bold text-[56px] text-center;
-  line-height: 69px;
+  @apply font-bold text-[32px] md:text-[56px] text-center;
 }
 
 .card {
-  @apply space-y-4 m-8 cursor-pointer pb-4;
+  @apply space-y-4 md:m-8 mx-2 my-4 cursor-pointer pb-4;
   border-bottom: 1px solid #bf996f;
 }
 
@@ -26,12 +25,12 @@
 }
 
 .title_open {
-  @apply text-dark-biege text-[24px];
+  @apply text-dark-biege text-[16px] md:text-[24px] w-[80%] md:w-full;
   transition: transform 0.5s ease-out, color 0.5s ease-out;
 }
 
 .title_closed {
-  @apply text-[#1E1E1E] text-[24px];
+  @apply text-[#1E1E1E] text-[16px] md:text-[24px] w-[80%] md:w-full;
   transition: transform 0.5s ease-out, color 0.5s ease-out;
 }
 
@@ -54,6 +53,7 @@
 .plus_closed {
   transform: rotate(0deg);
   transition: transform 0.5s ease-out, color 0.5s ease-out;
+ 
 }
 
 .plus_open {

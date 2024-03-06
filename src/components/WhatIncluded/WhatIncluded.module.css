@@ -1,18 +1,18 @@
 .title{
-    @apply text-[56px] font-bold text-black
+    @apply text-[32px] text-center md:text-left md:text-[56px] font-bold text-black
 }
 .section{
 @apply flex flex-col w-[80%] mx-auto space-y-16 mb-32;
 }
 .button{
-    @apply px-4 py-3 border border-dark-biege text-dark-biege rounded-[4px] w-[190px] text-center
+    @apply px-4 py-3 border mx-auto md:mx-0 border-dark-biege text-dark-biege rounded-[4px] w-[190px] text-center
 }
 .icon__bg{
     border-radius: 100%;
     @apply p-4 bg-dark-biege inline-block mx-auto
 }
 .grid__list{
-    @apply grid grid-cols-4 gap-4;
+    @apply grid md:grid-cols-4 gap-4;
 }
 .card__body{
     @apply justify-center items-center flex flex-col rounded-[24px] h-[300px] bg-white space-y-8;

@@ -70,11 +70,11 @@ export const Feedback = () => {
     <section className={styles.section}>
       <div className={styles.container}>
         <h1 className={styles.h1}>Our clients feedback</h1>
-        <div className="flex space-x-12">
+        <div className="flex space-x-4 md:space-x-12">
           <Google />
           <Trust />
         </div>
-        <div className="overflow-hidden">
+        <div className="overflow-hidden w-full">
           <motion.div
             className="flex space-x-8"
             animate={{ x: `${xPosition}%` }}
@@ -84,7 +84,7 @@ export const Feedback = () => {
             {cards.map((card, index) => (
               <div
                 key={index}
-                className="flex space-x-8"
+                className="flex space-x-4 md:space-x-8"
                 style={{ width: `32%`, flex: "0 0 auto" }}
               >
                 <Card name={card.name} desc={card.desc} />

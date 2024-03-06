@@ -38,7 +38,7 @@ const CustomSelect = ({ selectedCountry, setSelectedCountry }) => {
             
             getOptionLabel={e => (
                 <div style={{ display: 'flex', alignItems: 'center', color:'#BF996F' }}>
-                    <img src={e.flagUrl} alt="" style={{ width: '32px', height: '32px', marginRight: '10px' }} />
+                    <img src={e.flagUrl} alt="flag" className="circleFlag" />
                     {e.label}
                 </div>
             )}
