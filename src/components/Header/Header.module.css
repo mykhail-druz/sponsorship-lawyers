@@ -1,0 +1,24 @@
+.header {
+    @apply bg-light-biege flex justify-center;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1); /* Смещение по X, смещение по Y, размытие, цвет тени */
+}
+
+.container {
+    @apply flex w-[95%] py-2 justify-between;
+}
+
+.nav {
+    @apply flex items-center space-x-8 text-[16px] font-normal;
+}
+
+.phone {
+    @apply flex space-x-1 cursor-pointer;
+}
+
+.consultation {
+    @apply rounded border-[1px] border-dark-biege bg-biege py-4 px-5 cursor-pointer capitalize;
+}
+
+.licence {
+    @apply rounded border-[1px] border-dark-biege bg-dark text-dark-biege py-4 px-5 cursor-pointer;
+}
