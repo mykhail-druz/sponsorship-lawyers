@@ -1,3 +1,4 @@
+import { SponsorLicences, QuestGet } from "@/components";
 import AboutUs from "@/components/AboutUs/AboutUs";
 import Footer from "@/components/Footer/Footer";
 import Header from "@/components/Header/Header";
@@ -8,8 +9,12 @@ export default function Home() {
     <main>
       <Header />
       <HeroBanner />
+      <div className="background__color">
       <AboutUs />
+      <SponsorLicences />
+      <QuestGet />
       <Footer />
+      </div>
     </main>
   );
 }
