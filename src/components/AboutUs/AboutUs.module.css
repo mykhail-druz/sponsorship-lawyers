@@ -1,0 +1,39 @@
+.section {
+    @apply mt-8 mb-32 flex items-center justify-center;
+}
+
+.container {
+    @apply rounded-[24px] w-[90%] py-12 px-8;
+    background-color: #FFF1E2;
+}
+
+.text_1 {
+    @apply mx-auto text-center w-1/2;
+}
+
+.h1 {
+    @apply font-bold text-[56px] mb-4;
+    line-height: 69px;
+}
+
+.p {
+    @apply font-light text-[18px];
+    line-height: 27px;
+}
+
+.photo {
+    @apply flex my-16;
+}
+
+.text_2 {
+    @apply w-1/2 mb-36 space-y-12;
+}
+
+.h2 {
+    @apply font-bold text-[48px];
+    line-height: 59px;
+}
+
+.licence {
+    @apply rounded border-[1px] border-dark-biege bg-dark text-dark-biege py-4 px-5 cursor-pointer;
+}

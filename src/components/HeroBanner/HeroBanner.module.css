@@ -1,0 +1,7 @@
+.section {
+    @apply flex mt-32 mb-24;
+}
+
+.container {
+    @apply mx-auto;
+}
