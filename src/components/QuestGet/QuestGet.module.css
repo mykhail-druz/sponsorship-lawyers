@@ -14,7 +14,7 @@
     @apply font-bold text-[32px] text-center;
 }
 .button{
-    @apply bg-black p-4 text-dark-biege font-medium rounded-[4px] mx-auto
+    @apply bg-dark py-4 px-5 border-[1px] border-dark-biege text-dark-biege font-medium rounded-[4px] mx-auto
 }
 .content{
     @apply flex flex-col space-y-8

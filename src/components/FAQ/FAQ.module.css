@@ -1,0 +1,63 @@
+.section {
+  @apply my-32 flex;
+}
+
+.container {
+  @apply w-[70%] mx-auto rounded-[24px] py-6;
+  background-color: #fff8f0;
+  border-top: 1px solid #bf996f;
+  border-right: 6px solid #bf996f;
+  border-bottom: 6px solid #bf996f;
+  border-left: 1px solid #bf996f;
+}
+
+.h1 {
+  @apply font-bold text-[56px] text-center;
+  line-height: 69px;
+}
+
+.card {
+  @apply space-y-4 m-8 cursor-pointer pb-4;
+  border-bottom: 1px solid #bf996f;
+}
+
+.card_title__container {
+  @apply flex justify-between;
+}
+
+.title_open {
+  @apply text-dark-biege text-[24px];
+  transition: transform 0.5s ease-out, color 0.5s ease-out;
+}
+
+.title_closed {
+  @apply text-[#1E1E1E] text-[24px];
+  transition: transform 0.5s ease-out, color 0.5s ease-out;
+}
+
+.card_desc {
+  @apply text-[18px] font-light pr-4;
+  line-height: 27px;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+.open {
+  @apply text-[18px] font-light pr-4;
+  max-height: 500px;
+  opacity: 1;
+  transition: max-height 1s ease-out, opacity 1s ease-out;
+}
+
+.plus_closed {
+  transform: rotate(0deg);
+  transition: transform 0.5s ease-out, color 0.5s ease-out;
+}
+
+.plus_open {
+  color: #bf996f;
+  transform: rotate(45deg);
+  transition: transform 0.5s ease-out, color 0.5s ease-out;
+}
