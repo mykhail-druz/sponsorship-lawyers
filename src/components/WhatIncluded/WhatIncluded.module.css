@@ -2,7 +2,7 @@
     @apply text-[56px] font-bold text-black
 }
 .section{
-@apply flex flex-col w-[80%] mx-auto space-y-16;
+@apply flex flex-col w-[80%] mx-auto space-y-16 mb-32;
 }
 .button{
     @apply px-4 py-3 border border-dark-biege text-dark-biege rounded-[4px] w-[190px] text-center

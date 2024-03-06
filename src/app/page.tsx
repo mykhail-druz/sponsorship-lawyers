@@ -7,7 +7,8 @@ import {
   FAQ,
   HeroBanner,
   WhatIncluded, 
-  LawyersForYour
+  LawyersForYour,
+  Feedback
 } from "@/components";
 
 export default function Home() {
@@ -17,10 +18,12 @@ export default function Home() {
       <HeroBanner />
       <div className="background__color">
       <AboutUs />
+      <Feedback />
       <LawyersForYour />
       <SponsorLicences />
       <QuestGet />
       <WhatIncluded />
+      <Feedback />
       <FAQ />
       <Footer />
       </div>

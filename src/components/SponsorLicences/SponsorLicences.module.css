@@ -10,7 +10,7 @@
     width: 100%;
     height: 750px;
     
-    @apply relative flex flex-col items-center justify-center
+    @apply relative flex flex-col items-center justify-center 
 }
 .title{
     @apply text-dark-biege font-bold lg:text-[56px] text-center
