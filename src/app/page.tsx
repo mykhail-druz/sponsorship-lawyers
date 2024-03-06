@@ -9,7 +9,6 @@ import {
   WhatIncluded, 
   LawyersForYour
 } from "@/components";
-import { SponsorLicences, QuestGet, Footer, Header, WhatIncluded, LawyersForYour } from "@/components";
 
 export default function Home() {
   return (
@@ -18,8 +17,6 @@ export default function Home() {
       <HeroBanner />
       <div className="background__color">
       <AboutUs />
-      <LawyersForYour />
-      <SponsorLicences />
       <LawyersForYour />
       <SponsorLicences />
       <QuestGet />
