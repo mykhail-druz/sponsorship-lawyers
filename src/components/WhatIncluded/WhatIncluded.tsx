@@ -12,7 +12,7 @@ export const WhatIncluded = () => {
     <section className={styles.section}>
       <div className={styles.text__block}>
         <h1 className={`${basker.className} ${styles.title}`}>
-          What is included in our <br /> sponsor licence service?
+          What is included in our sponsor licence service?
         </h1>
         <a className={`${poppins.className} ${styles.button}`} href="">
           Apply for a licence

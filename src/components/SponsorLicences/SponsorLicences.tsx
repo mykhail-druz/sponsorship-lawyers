@@ -10,7 +10,7 @@ export const SponsorLicences = () => {
       <div className={styles.content}>
         <div>
           <h1 className={`${basker.className} ${styles.title}`}>
-            What types of sponsor licences <br /> are available?
+            What types of sponsor licences are available?
           </h1>
           <p className={`${poppins.className} ${styles.description}`}>
             Depending on your business, there are different sponsor licences. If
