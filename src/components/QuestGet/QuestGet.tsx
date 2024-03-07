@@ -33,11 +33,11 @@ export const QuestGet = () => {
         </h2>
         <div className={`${styles.documents} ${poppins.className}`}>
           <Card title={"VAT Certificate"} icon={<Vat />} />
-                  <Card title={"Bank Statements"} icon={<State />} />
-                  <Card title={"Liability Insurance"} icon={<Umbrella />} />
-                  <Card title={"Annual Accounts"} icon={<Account />} />
-                  <Card title={"Lease or proof of ownership"} icon={<House />} />
-                  <Card title={"Paye Document"} icon={<Docs />} />
+          <Card title={"Bank Statements"} icon={<State />} />
+          <Card title={"Liability Insurance"} icon={<Umbrella />} />
+          <Card title={"Annual Accounts"} icon={<Account />} />
+          <Card title={"Lease or proof of ownership"} icon={<House />} />
+          <Card title={"Paye Document"} icon={<Docs />} />
         </div>
         <a className={`${styles.button} ${poppins.className}`} href="#contact">
           Free Consultation

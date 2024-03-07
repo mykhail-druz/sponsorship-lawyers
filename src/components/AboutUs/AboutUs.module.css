@@ -37,5 +37,8 @@
     @apply rounded border-[1px] border-dark-biege bg-dark text-dark-biege py-4 px-5 cursor-pointer;
 }
 .second__block{
-    @apply flex flex-col md:flex-row justify-between
+    @apply flex flex-col md:flex-row justify-between 
+}
+.image__bottom{
+    @apply w-[400px] lg:w-[600px] lg:h-[460px] md:my-auto my-0 lg:my-0 mx-auto md:mx-0
 }

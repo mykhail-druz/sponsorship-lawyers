@@ -15,7 +15,7 @@
 }
 
 .p {
-    @apply capitalize text-[24px] text-white;
+    @apply capitalize text-[24px] text-white text-center;
 }
 
 .a {

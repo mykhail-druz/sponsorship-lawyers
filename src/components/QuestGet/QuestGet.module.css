@@ -30,5 +30,5 @@
     @apply text-light-dark lg:text-[18px] text-center font-light;
 }
 .documents{
-    @apply grid md:grid-cols-3 md:gap-y-12 gap-y-4 justify-center md:gap-x-32
+    @apply grid md:grid-cols-2 lg:grid-cols-3 md:gap-y-12 gap-y-4 justify-center md:gap-x-32
 }

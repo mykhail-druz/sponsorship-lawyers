@@ -9,7 +9,7 @@
 .section{
     width: 100%;
    
-    @apply h-[100%] py-16 md:py-0 md:h-[800px] relative flex flex-col items-center justify-center 
+    @apply h-[100%] py-16 lg:py-0 lg:h-[800px] relative flex flex-col items-center justify-center 
 }
 .title{
     @apply text-dark-biege font-bold text-[32px] md:text-[56px] text-center
@@ -22,10 +22,10 @@
     @apply space-y-16 flex flex-col
 }
 .grid__card{
-    @apply grid md:grid-cols-3 gap-4 px-4
+    @apply grid grid-cols-1 lg:grid-cols-3 gap-4 px-4
 }
 .card__body{
-    @apply justify-center items-center flex flex-col rounded-[24px] h-[300px] w-[100%] md:h-[275px] md:w-[450px] space-y-3;
+    @apply justify-center items-center flex flex-col rounded-[24px] h-[300px] w-[100%] lg:h-[275px] md:w-[100%] lg:w-[450px] space-y-3;
      border-top: 1px solid #BF996F;
      border-right: 6px solid #BF996F;
      border-bottom: 6px solid #BF996F;

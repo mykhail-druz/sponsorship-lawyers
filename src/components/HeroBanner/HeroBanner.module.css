@@ -1,9 +1,9 @@
 .section {
-    @apply flex md:flex-row flex-col md:mt-32 mt-16 md:mb-24 md:mx-24 justify-center;
+    @apply flex md:flex-row flex-col md:mt-24 md:mb-24 lg:mt-32 mt-16 lg:mb-24 md:mx-8 lg:mx-24 justify-center;
 }
 
 .container {
-    @apply w-full flex md:flex-row flex-col space-y-8 md:space-y-0 md:justify-between;
+    @apply w-full flex md:flex-row flex-col space-y-8 md:space-x-4 lg:space-x-0 md:space-y-0 md:justify-between;
 }
 .dark__beige{
     @apply text-brown
@@ -49,7 +49,7 @@
 @apply text-[14px] md:text-[18px] font-light text-light-dark flex gap-2
 }
 .check__block{
-    @apply flex md:space-x-4 md:flex-row flex-col
+    @apply flex lg:space-x-4 lg:flex-row flex-col
 }
 .check__list{
     @apply md:space-y-2 ml-3 md:ml-0

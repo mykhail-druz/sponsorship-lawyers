@@ -54,7 +54,7 @@ export const AboutUs = () => {
             </a>
           </button>
         </div>
-        <Image height={460} width={600} src="/images/about/about_6.png" alt="Hire" />
+        <Image height={460} width={600} className={styles.image__bottom} src="/images/about/about_6.png" alt="Hire" />
       </div>
       </div>
     </section>
