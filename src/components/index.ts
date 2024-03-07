@@ -8,3 +8,4 @@ export * from './HeroBanner'
 export * from './WhatIncluded';
 export * from './LawyersForYour'
 export * from './Feedback'
+export * from './ButtonUp'

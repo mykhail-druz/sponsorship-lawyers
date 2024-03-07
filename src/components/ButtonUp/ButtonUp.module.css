@@ -1,0 +1,7 @@
+.button__container {
+    @apply sticky w-full z-50 top-[95%] ;
+}
+
+.button {
+    @apply absolute right-6 md:right-12 bottom-0 rounded-full border-[2px] border-black bg-light-biege text-black text-xl p-3 hover:scale-110 duration-100;
+}
