@@ -1,0 +1,11 @@
+.section {
+    @apply flex h-screen w-full bg-[#FFFCF9] items-center;
+}
+
+.container {
+    @apply mx-auto;
+}
+
+.title {
+    @apply uppercase font-bold text-[104px];
+}
