@@ -64,19 +64,24 @@ export const Feedback = () => {
     setCurrentSlide(newIndex);
   };
 
-  const xPosition = (-currentSlide * 102) / visibleCardsCount;
-
+  let xPosition = 0;
+  if (visibleCardsCount === 1) {
+    xPosition = (-currentSlide * 108.5); 
+  } else {
+    xPosition = (-currentSlide * 106) / visibleCardsCount;
+  }
+  const cardWidthPercentage = 100 / visibleCardsCount;
   return (
     <section className={styles.section}>
       <div className={styles.container}>
         <h1 className={styles.h1}>Our clients feedback</h1>
-        <div className="flex space-x-4 md:space-x-12">
+        <div className="flex space-x-4 md:space-x-12 px-4 md:px-0">
           <Google />
           <Trust />
         </div>
-        <div className="overflow-hidden w-full">
+        <div className="overflow-hidden md:w-full w-[400px] px-2">
           <motion.div
-            className="flex space-x-8"
+            className="flex space-x-8 w-full"
             animate={{ x: `${xPosition}%` }}
             transition={{ type: "spring", stiffness: 100, damping: 20 }}
             style={{ width: `${100}%`, display: "flex" }}
@@ -84,8 +89,8 @@ export const Feedback = () => {
             {cards.map((card, index) => (
               <div
                 key={index}
-                className="flex space-x-4 md:space-x-8"
-                style={{ width: `32%`, flex: "0 0 auto" }}
+                className="flex space-x-4 md:space-x-8 md:w-1/3"
+                style={{ width: `${cardWidthPercentage}%`, flex: "0 0 auto" }}
               >
                 <Card name={card.name} desc={card.desc} />
               </div>
