@@ -49,7 +49,7 @@ export const AboutUs = () => {
             backgrounds.
           </p>
           <button>
-            <a href="#" className={styles.licence}>
+            <a href="#contact" className={styles.licence}>
               Apply for a licence
             </a>
           </button>

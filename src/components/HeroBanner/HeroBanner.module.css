@@ -40,7 +40,7 @@
     @apply font-bold text-[29px]
 }
 .button{
-    @apply w-full bg-dark text-center py-3 text-white font-bold rounded
+    @apply w-full bg-dark border-[1px] border-dark-biege text-center py-3 text-white font-bold rounded
 }
 .content{
 @apply space-y-4 mb-16 mt-8

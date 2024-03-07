@@ -11,7 +11,7 @@ export const LawyersForYour = () => {
           <h1 className={`${styles.title} ${basker.className}`}>
             Why choose our  lawyers for your sponsor licence?
           </h1>
-          <a className={styles.button} href="">
+          <a className={styles.button} href="#contact">
             Apply for a licence
           </a>
         </div>
