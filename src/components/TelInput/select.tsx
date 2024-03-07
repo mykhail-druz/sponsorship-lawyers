@@ -5,8 +5,8 @@ import { countries } from './country'
 const CustomSelect = ({ selectedCountry, setSelectedCountry }) => {
     const sortedCountries = [...countries].sort((a, b) => a.name.localeCompare(b.name));
     const options = sortedCountries.map(country => ({
-        label: `(${country.dialCode})`, // Updated to include country name
-        value: country.code, // Consider using country.code as the unique value
+        label: `(${country.dialCode})`, 
+        value: country.code,
         flagUrl: `/images/flags/${country.code.toLowerCase()}.svg`,
     }));
     const handleChange = (selectedOption) => {

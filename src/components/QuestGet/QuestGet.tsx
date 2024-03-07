@@ -39,7 +39,7 @@ export const QuestGet = () => {
                   <Card title={"Lease or proof of ownership"} icon={<House />} />
                   <Card title={"Paye Document"} icon={<Docs />} />
         </div>
-        <a className={`${styles.button} ${poppins.className}`} href="">
+        <a className={`${styles.button} ${poppins.className}`} href="#contact">
           Free Consultation
         </a>
       </div>

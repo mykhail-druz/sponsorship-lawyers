@@ -14,7 +14,7 @@ export const WhatIncluded = () => {
         <h1 className={`${basker.className} ${styles.title}`}>
           What is included in our sponsor licence service?
         </h1>
-        <a className={`${poppins.className} ${styles.button}`} href="">
+        <a className={`${poppins.className} ${styles.button}`} href="#contact">
           Apply for a licence
         </a>
       </div>

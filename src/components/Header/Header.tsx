@@ -13,8 +13,8 @@ export const Header = () => {
             <Phone />
             <a href="tel:+4401618201101">01618201101</a>
           </div>
-          <a href="#" className={styles.consultation}>Free consultation</a>
-          <a href="#" className={styles.licence}>Apply for a licence</a>
+          {/* <a href="#" className={styles.consultation}>Free consultation</a> */}
+          <a href="#contact" className={styles.licence}>Apply for a licence</a>
         </nav>
       </div>
     </header>
