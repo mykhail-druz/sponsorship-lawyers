@@ -1,34 +1,41 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { countries } from "./country";
 import CustomSelect from "./select";
+import { poppins } from "@/fonts/fonts";
 
 interface MyPhoneInputProps {
   value: string;
   onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  setFormData: (value: React.SetStateAction<any>) => void; 
+  countryCode: string; 
+  className?: string; 
 }
 
-export function MyPhoneInput({ value, onChange }: MyPhoneInputProps) {
+export function MyPhoneInput({ value, onChange, setFormData, countryCode, className }: MyPhoneInputProps) {
   const [selectedCountry, setSelectedCountry] = useState(countries[229]);
-  const [phoneNumber, setPhoneNumber] = useState("");
+
+  const handleCountryChange = (country:any) => {
+    setSelectedCountry(country);
+    setFormData((currentFormData: any) => ({
+      ...currentFormData,
+      countryCode: country.dialCode,
+    }));
+  };
 
   return (
-    <div
-      className="inputLarge"
-      style={{ display: "flex", alignItems: "center", color: "#BF996F" }}
-    >
+    <div className={`inputLarge ${className}`} style={{ display: "flex", alignItems: "center", color: "#BF996F" }}>
       <CustomSelect
         selectedCountry={selectedCountry}
-        setSelectedCountry={setSelectedCountry}
+        setSelectedCountry={handleCountryChange}
       />
       <input
-      id="phone"
-      name="phone"
         type="tel"
+        name="phone"
         value={value}
         onChange={onChange}
         placeholder="Phone number"
-        className="input"
+        className={`input ${poppins.className}`}
       />
     </div>
   );

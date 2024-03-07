@@ -3,7 +3,6 @@ import styles from "./HeroBanner.module.css";
 import { poppins, basker } from "@/fonts/fonts";
 import Check from "@/icons/CheckCircle.svg";
 import { MyPhoneInput } from "../TelInput/input";
-
 import axios from "axios";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -16,6 +15,7 @@ export const HeroBanner = () => {
     email: "",
     companyName: "",
     position: "",
+    countryCode: "",
   });
 
   const handleChange = (
@@ -30,35 +30,42 @@ export const HeroBanner = () => {
     }));
   };
 
-  const handleSubmit = async (event: { preventDefault: () => void; }) => {
+
+  const handleSubmit = async (event:any) => {
     event.preventDefault();
-  
+
+    const dataToSend = {
+      ...formData,
+      phone: `${formData.countryCode}${formData.phone}`,
+    };
+
     try {
-      // URL вебхука Zapier, который вы получили
-      const webhookUrl = 'https://hooks.zapier.com/hooks/catch/13171226/3rfsz0u/';
-  
-      // Отправка данных формы на вебхук Zapier
-      const response = await axios.post(webhookUrl, formData);
-  
-      // Проверка ответа от вебхука и уведомление пользователя
-      if (response.status === 200) {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(dataToSend),
+      });
+
+      if (response.ok) {
         toast.success("Message sent!");
-        // Сброс данных формы после успешной отправки
         setFormData({
           name: "",
           phone: "",
           email: "",
           companyName: "",
           position: "",
+          countryCode: "",
         });
       } else {
-        toast.error("Error!");
+        const errorData = await response.json();
+        toast.error(`Error: ${errorData.message}`);
       }
     } catch (error) {
-      toast.error("Connection error!");
+      toast.error("Connection error or server issue!");
     }
   };
-  
 
   return (
     <section className={styles.section}>
@@ -120,6 +127,8 @@ export const HeroBanner = () => {
                 <MyPhoneInput
                   value={formData.phone}
                   onChange={handleChange}
+                  setFormData={setFormData} 
+                  countryCode={formData.countryCode}
                   className={`${styles.inputBig} ${poppins.className}`}
                 />
                 <input
