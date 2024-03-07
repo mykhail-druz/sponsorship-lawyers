@@ -41,7 +41,11 @@ const CustomSelect: React.FC<CustomSelectProps> = ({ selectedCountry, setSelecte
         control: (baseStyles) => ({
             ...baseStyles,
             border: 0,
-            background: '#F5F5F5'
+            background: '#F5F5F5',
+            width:'140px',
+            height:'30px',
+            flexDirection:'row',
+            display:'flex'
         }),
         dropdownIndicator: (styles) => ({
             ...styles,
@@ -55,7 +59,7 @@ const CustomSelect: React.FC<CustomSelectProps> = ({ selectedCountry, setSelecte
 
     const formatOptionLabel = (option: Option) => (
         <div style={{ display: 'flex', alignItems: 'center' }}>
-            <img src={option.flagUrl} alt="" style={{ marginRight: 10, width: 20, height: 15 }} />
+            <img src={option.flagUrl} alt="" style={{ marginRight: 10, width: 16, height: 16 }} />
             {option.label}
         </div>
     );
