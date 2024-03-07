@@ -9,6 +9,7 @@ import {
   WhatIncluded,
   LawyersForYour,
   Feedback,
+  ButtonUp,
 } from "@/components";
 import { ToastContainer } from "react-toastify";
 
@@ -28,6 +29,7 @@ export default function Home() {
         theme="light"
       />
       <Header />
+      <ButtonUp />
       <HeroBanner />
       <div className="background__color">
         <AboutUs />

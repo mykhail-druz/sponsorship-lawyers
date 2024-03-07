@@ -30,16 +30,20 @@ export const HeroBanner = () => {
     }));
   };
 
-  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: { preventDefault: () => void; }) => {
     event.preventDefault();
-
+  
     try {
-      const response = await axios.post("/api/contact", {
-        ...formData,
-      });
-
-      if (response.status >= 200 && response.status < 300) {
+      // URL вебхука Zapier, который вы получили
+      const webhookUrl = 'https://hooks.zapier.com/hooks/catch/13171226/3rfsz0u/';
+  
+      // Отправка данных формы на вебхук Zapier
+      const response = await axios.post(webhookUrl, formData);
+  
+      // Проверка ответа от вебхука и уведомление пользователя
+      if (response.status === 200) {
         toast.success("Message sent!");
+        // Сброс данных формы после успешной отправки
         setFormData({
           name: "",
           phone: "",
@@ -54,6 +58,7 @@ export const HeroBanner = () => {
       toast.error("Connection error!");
     }
   };
+  
 
   return (
     <section className={styles.section}>
