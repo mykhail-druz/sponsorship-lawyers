@@ -3,7 +3,6 @@ import styles from "./HeroBanner.module.css";
 import { poppins, basker } from "@/fonts/fonts";
 import Check from "@/icons/CheckCircle.svg";
 import { MyPhoneInput } from "../TelInput/input";
-import axios from "axios";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import React, { useState } from "react";
@@ -30,22 +29,19 @@ export const HeroBanner = () => {
     }));
   };
 
-
-  const handleSubmit = async (event:any) => {
+  const handleSubmit = async (event: { preventDefault: () => void; }) => {
     event.preventDefault();
 
-    const dataToSend = {
-      ...formData,
-      phone: `${formData.countryCode}${formData.phone}`,
-    };
-
     try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
+      const response = await fetch("/api/contact", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
-        body: JSON.stringify(dataToSend),
+        body: JSON.stringify({
+          ...formData,
+          phone: `${formData.countryCode}${formData.phone}`,
+        }),
       });
 
       if (response.ok) {
@@ -58,6 +54,8 @@ export const HeroBanner = () => {
           position: "",
           countryCode: "",
         });
+
+        window.location.href = "/thank-you";
       } else {
         const errorData = await response.json();
         toast.error(`Error: ${errorData.message}`);
@@ -107,7 +105,12 @@ export const HeroBanner = () => {
             <img src="/images/hero/ilpa.png" alt="" />
           </div>
         </div>
-        <form id="contact" onSubmit={handleSubmit} action="POST" className={styles.form}>
+        <form
+          id="contact"
+          onSubmit={handleSubmit}
+          action="POST"
+          className={styles.form}
+        >
           <div className={styles.form__bg}>
             <p className={`${styles.title__form} ${basker.className}`}>
               Book Your Sponsor Licence Consultation
@@ -127,7 +130,7 @@ export const HeroBanner = () => {
                 <MyPhoneInput
                   value={formData.phone}
                   onChange={handleChange}
-                  setFormData={setFormData} 
+                  setFormData={setFormData}
                   countryCode={formData.countryCode}
                   className={`${styles.inputBig} ${poppins.className}`}
                 />
