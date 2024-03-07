@@ -1,6 +1,5 @@
 import styles from "./Footer.module.css";
 import { poppins, basker } from "@/fonts/fonts";
-
 import Logo from "@/icons/logo.svg";
 import Email from "@/icons/footer/email.svg";
 import Geo from "@/icons/footer/geo.svg";
@@ -47,12 +46,11 @@ export const Footer = () => {
             number 12851925. A list of directors of the company is available for
             inspection at the registered office: 837 Manchester Road, Bradford,
             England, BD5 8LT. Authorised by the Solicitors Regulation Authority
-            under Registration Number 807786. <br />VAT number 384131407
+            under Registration Number 807786. <br />
+            VAT number 384131407
           </p>
         </div>
       </div>
     </footer>
   );
 };
-
-
