@@ -1,52 +1,33 @@
-import { NextApiRequest, NextApiResponse } from "next";
-import nodemailer from "nodemailer";
+export default async function handler(req:any, res:any) {
 
-interface ContactFormData {
-  name: string;
-  phone: string;
-  email: string;
-  companyName: string;
-  position: string;
-}
-
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse
-) {
   if (req.method === "POST") {
-    const { name, phone, email, companyName, position } =
-      req.body as ContactFormData;
-    const formData: ContactFormData = {
-      name,
-      phone,
-      email,
-      companyName,
-      position,
-    };
-
-    // Отправка электронной почты
-    const transporter = nodemailer.createTransport({
-      service: "gmail",
-      auth: {
-        user: process.env.EMAIL_NODEMAILER,
-        pass: process.env.PASS_NODEMAILER,
-      },
-    });
-
     try {
-      const info = await transporter.sendMail({
-        from: `"${formData.name} " <${formData.email}>`,
-        to: "dda3127@gmail.com",
-        subject: "New message from site visitor",
-        text: `Name: ${formData.name}\nPhone: ${formData.phone}\nEmail: ${formData.email}\nCompany name: ${formData.companyName}\nPosition: ${formData.position}`,
+      const zapierUrl =
+        "https://hooks.zapier.com/hooks/catch/13171226/3rfsz0u/";
+      const response = await fetch(zapierUrl, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(req.body), 
       });
-      // console.log('Message sent: %s', info.messageId);
-      res.status(200).end();
+
+      if (response.ok) {
+        res
+          .status(200)
+          .json({ status: "Success", message: "Data sent to Zapier." });
+      } else {
+        res
+          .status(response.status)
+          .json({ status: "Error", message: "Failed to send data to Zapier." });
+      }
     } catch (error) {
-      // console.log(error);
-      res.status(500).end();
+       const message =
+         error instanceof Error ? error.message : "An unknown error occurred";
+       res.status(500).json({ status: "Error", message });
     }
   } else {
-    res.status(405).end();
+    res.setHeader("Allow", ["POST"]);
+    res.status(405).json({ status: "Error", message: "Method Not Allowed" });
   }
 }
