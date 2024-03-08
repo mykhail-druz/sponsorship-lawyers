@@ -1,17 +1,17 @@
 .title{
-@apply font-bold text-[32px] md:text-[56px] text-center;
+@apply font-bold text-[28px] md:text-[56px] text-center;
 }
 .section{
-    @apply flex flex-col items-center space-y-8 py-16 px-4;
+    @apply flex flex-col items-center space-y-8 py-8 md:py-16 px-4;
 }
 .text__block{
     @apply flex space-y-4 flex-col
 }
 .desc{
-    @apply font-light text-[18px] text-light-dark text-center;
+    @apply font-light text-[14px] md:text-[18px] text-light-dark text-center;
 }
 .subtitle{
-    @apply font-bold text-[32px] text-center;
+    @apply font-bold text-[28px] md:text-[32px] text-center;
 }
 .button{
     @apply bg-dark py-4 px-5 border-[1px] border-dark-biege text-dark-biege font-medium rounded-[4px] mx-auto

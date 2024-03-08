@@ -79,7 +79,7 @@ export const Feedback = () => {
           <Google />
           <Trust />
         </div>
-        <div className="overflow-hidden md:w-full w-[400px] px-2">
+        <div className={`overflow-hidden md:w-full max-w-[100vw] px-2`}>
           <motion.div
             className="flex space-x-8 w-full"
             animate={{ x: `${xPosition}%` }}

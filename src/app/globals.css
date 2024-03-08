@@ -26,7 +26,7 @@ input{
   width: 100%;
 }
 .inputLarge {
-  @apply md:w-[60%] border border-brown rounded bg-[#f5f5f5] py-2 px-3 h-[60px];
+  @apply md:w-[60%] border border-brown rounded bg-[#f5f5f5] py-2 px-3 md:h-[60px] h-[45px];
 }
 .input {
   @apply bg-[#f5f5f5] text-black;

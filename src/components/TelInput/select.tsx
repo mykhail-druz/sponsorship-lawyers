@@ -43,7 +43,7 @@ const CustomSelect: React.FC<CustomSelectProps> = ({ selectedCountry, setSelecte
             border: 0,
             background: '#F5F5F5',
             width:'140px',
-            height:'30px',
+            height:'10px',
             flexDirection:'row',
             display:'flex'
         }),
