@@ -33,7 +33,6 @@ export default function Home() {
       <HeroBanner />
       <div className="background__color">
         <AboutUs />
-        <Feedback />
         <LawyersForYour />
         <SponsorLicences />
         <QuestGet />

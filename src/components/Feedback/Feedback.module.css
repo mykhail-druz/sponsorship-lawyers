@@ -29,7 +29,7 @@
 }
 
 .nav__block {
-  @apply flex space-x-4;
+  @apply flex space-x-4 ml-2;
 }
 @media (max-width: 768px) {
   .card__container {
