@@ -7,6 +7,7 @@ import CircleLeft from "@/icons/feedback/CircleLeft.svg";
 import CircleRight from "@/icons/feedback/CircleRight.svg";
 import { Card } from "./Card";
 import { motion } from "framer-motion";
+import { basker } from "@/fonts/fonts";
 
 export const Feedback = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -74,8 +75,8 @@ export const Feedback = () => {
   return (
     <section className={styles.section}>
       <div className={styles.container}>
-        <h1 className={styles.h1}>Our clients feedback</h1>
-        <div className="flex space-x-4 md:space-x-12 px-4 md:px-0">
+        <h1 className={`${styles.h1} ${basker.className}`}>Our clients feedback</h1>
+        <div className="flex space-x-4 md:space-x-12 px-4 md:px-0 items-center">
           <Google />
           <Trust />
         </div>
