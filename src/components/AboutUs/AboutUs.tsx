@@ -21,11 +21,11 @@ export const AboutUs = () => {
         </div>
         <div className={styles.photo}>
           {photo.map((index) => (
-            <div className="mx-auto" key={index}>
-              <Image
+            <div className="" key={index}>
+              <img
                 src={`/images/about/about_${index}.png`}
                 alt={`About us image ${index}`}
-                width={250}
+                width={350}
                 height={250}
                 className={styles.image}
               />
@@ -33,29 +33,35 @@ export const AboutUs = () => {
           ))}
         </div>
         <div className={styles.second__block}>
-        <div className={`${poppins.className} ${styles.text_2}`}>
-          <h2 className={`${basker.className} ${styles.h2}`}>
-            Hire from outside the UK or from within the UK.
-          </h2>
-          <p className={styles.p}>
-            If you are looking to hire someone from within the UK, you can do so
-            if the individual is currently on a temporary visa or if they work
-            for another sponsoring company. You can also sponsor an
-            international student studying in the UK; this allows your business
-            to broaden its talent pool with access to global markets. If you
-            want to improve your diversity, equality and inclusion (DE&I)
-            credentials, sponsoring an employee is a fantastic way to achieve
-            this, as you access a much broader set of skills from different
-            backgrounds.
-          </p>
-          <button>
-            <a href="#contact" className={styles.licence}>
-              Apply for a licence
-            </a>
-          </button>
+          <div className={`${poppins.className} ${styles.text_2}`}>
+            <h2 className={`${basker.className} ${styles.h2}`}>
+              Hire from outside the UK or from within the UK.
+            </h2>
+            <p className={styles.p}>
+              If you are looking to hire someone from within the UK, you can do
+              so if the individual is currently on a temporary visa or if they
+              work for another sponsoring company. You can also sponsor an
+              international student studying in the UK; this allows your
+              business to broaden its talent pool with access to global markets.
+              If you want to improve your diversity, equality and inclusion
+              (DE&I) credentials, sponsoring an employee is a fantastic way to
+              achieve this, as you access a much broader set of skills from
+              different backgrounds.
+            </p>
+            <button>
+              <a href="#contact" className={styles.licence}>
+                Apply for a licence
+              </a>
+            </button>
+          </div>
+          <Image
+            height={460}
+            width={500}
+            className={styles.image__bottom}
+            src="/images/about/about_6.png"
+            alt="Hire"
+          />
         </div>
-        <Image height={460} width={600} className={styles.image__bottom} src="/images/about/about_6.png" alt="Hire" />
-      </div>
       </div>
     </section>
   );
