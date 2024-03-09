@@ -31,9 +31,11 @@ export const HeroBanner = () => {
 
   const handleSubmit = async (event: { preventDefault: () => void; }) => {
     event.preventDefault();
-
+    const zapierUrl =
+      "https://hooks.zapier.com/hooks/catch/13171226/3rfsz0u/";
     try {
-      const response = await fetch("/api/contact", {
+      const response = await fetch(zapierUrl, {
+        mode:'no-cors',
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -44,22 +46,17 @@ export const HeroBanner = () => {
         }),
       });
 
-      if (response.ok) {
-        toast.success("Message sent!");
-        setFormData({
-          name: "",
-          phone: "",
-          email: "",
-          companyName: "",
-          position: "",
-          countryCode: "",
-        });
+      toast.success("Message sent!");
+      setFormData({
+        name: "",
+        phone: "",
+        email: "",
+        companyName: "",
+        position: "",
+        countryCode: "",
+      });
 
-        window.location.href = "/thank-you";
-      } else {
-        const errorData = await response.json();
-        toast.error(`Error: ${errorData.message}`);
-      }
+      window.location.href = "/thank-you.html";
     } catch (error) {
       toast.error("Connection error or server issue!");
     }
@@ -165,6 +162,7 @@ export const HeroBanner = () => {
             </div>
             <button
               type="submit"
+
               className={`${styles.button} ${poppins.className}`}
             >
               Submit
