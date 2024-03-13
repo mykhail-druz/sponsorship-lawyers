@@ -18,7 +18,7 @@ export default function ThankYou() {
             Call Now : <a href="tel:+4401618201101">01618201101</a>
           </p>
         </div>
-      </div>
+      </div>git
     </section>
   );
 }
